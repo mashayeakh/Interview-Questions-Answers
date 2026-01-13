@@ -1,0 +1,55 @@
+
+# Rendering Strategies:
+1. What is Server-Side Rendering (SSR)?  
+2. What is Static Site Generation (SSG)?  
+3. What is Incremental Static Regeneration (ISR)?  
+4. What is Client-Side Rendering (CSR)?  
+5. When would you choose SSR over SSG?  
+6. How does Next.js decide whether a page is static or dynamic?  
+7. What is streaming in Next.js?  
+8. What is Partial Prerendering?  
+
+//--------------------------------------------------------------------------
+
+
+//Answers:
+
+1. What is Server-Side Rendering (SSR)?  
+
+-> Server side rendering means the page is generated on the server side for every req. The server fetches the data, renders the html and send it to the browser that already populated. 
+
+In nextjs, ssr is userful as its contents changes continuously on request like dahsboard, real time data etc.. This is also very useful for SEO ans faster content paint compared top client only. 
+
+
+
+2. What is Static Site Generation (SSG)?  
+
+-> Satic site generation means pages are built at "Build Time" no on each req as a result the static HTML beomes very fast with CDN
+
+In nextjs, SSG is ideal for those applications where pages do not change frequently like landing pages, blogs, doc.. It offers excellent performence and low server cost. 
+
+
+
+3. What is Incremental Static Regeneration (ISR)?  
+
+->ITs a hybrid between SSG and SSR (SSG + SSR), as name suggest pages are still generated staticlly but nextjs regenerates them in the backgroud after a certain time. 
+
+
+
+4. What is Client-Side Rendering (CSR)?  
+
+->CSR means that pages are built in the browser using js. The server sends an empty HTML shell and the data is fetched after loading pages
+
+Highly interactive for dahsboard/real time UI. However, weaker for SEO and inital load performence. 
+
+
+
+5. When would you choose SSR over SSG?  
+-> Choose SSR IF -
+    a. I am dependent on the logged-in user
+    b. The ui changes frequently like real time, 
+    c. I need request based logic like cookies / headers
+
+-> Choose SSG IF -
+    a. the ui does not change frequently
+    b. Ideal for protfolio, Docs, Blogs Application. 
