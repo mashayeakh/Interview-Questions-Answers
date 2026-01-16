@@ -9,6 +9,7 @@
 7. What is streaming in Next.js?  
 8. What is Partial Prerendering?  
 
+
 //--------------------------------------------------------------------------
 
 
@@ -24,7 +25,7 @@ In nextjs, ssr is userful as its contents changes continuously on request like d
 
 2. What is Static Site Generation (SSG)?  
 
--> Satic site generation means pages are built at "Build Time" no on each req as a result the static HTML beomes very fast with CDN
+-> Satic site generation means pages are built at "Build Time" no on each req as a result the static HTML beomes very fast with CDN(Content Delivery Network - a global network of servers that caches website conte)
 
 In nextjs, SSG is ideal for those applications where pages do not change frequently like landing pages, blogs, doc.. It offers excellent performence and low server cost. 
 
@@ -53,3 +54,33 @@ Highly interactive for dahsboard/real time UI. However, weaker for SEO and inita
 -> Choose SSG IF -
     a. the ui does not change frequently
     b. Ideal for protfolio, Docs, Blogs Application. 
+
+
+6. How does Next.js decide whether a page is static or dynamic?  
+->Whether a page is static or dynamic this depends on how data is fetched or uses
+
+Dynamic - If a page reads things like cookies, headers, search params, req body, nextjs automatically marks the page as dynamic and renders it on each request. 
+
+Static - If a page uses "Cached data" and does not depend on request specfic values, nextjs teats it as static or prerenders.
+
+[Cached data] - Its a shortcut memory of device
+ * When you visit any site/app it saves some files (imgs, scripts or a few info) locally
+ * when you re-visit those site/app, it does not download the same img or scripts rather it serves same img and scripts to make the system efficient. 
+
+
+
+7. What is streaming in Next.js?  
+->Streaming allows Nextjs to send the page to the browser in "Chunk" rather than sending at once. 
+
+In real world, Because of this, it avoid blocking page which might happen becuse of slow api. 
+
+
+8. What is Partial Prerendering?  
+->Its a hybrid approach where the static parts of a page are pre-rendered and dynamic parts are rended at req time. 
+
+this gives you benefits to personalize your application. 
+
+
+
+
+
