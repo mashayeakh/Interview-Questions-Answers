@@ -1,0 +1,96 @@
+**Core Next.js Concepts:**
+
+1. What is Next.js and why would you use it over React?  
+2. What problems does Next.js solve?  
+3. How does Next.js differ from Create React App?  
+4. What are the main features of Next.js?  
+5. Explain the file-based routing system in Next.js  
+6. What is the pages router vs the app router?  
+7. What is the role of layout.tsx in the App Router?  
+8. What is use client and why is it needed?  
+9. What are Server Components in Next.js?  
+10. What are Client Components in Next.js?
+
+
+----------------------------------------------------------------------------------------------------------
+
+1. What is Next.js and why would you use it over React?  
+->Next js is react based framework that adds production-ready features like routing, rendering Strategies, seo support and performence optimization. 
+
+I would go with nextjs over plain react js because it removes a lot of setup and archhitectural decisiions. It gives me fast development, fewer custom solution.
+
+
+
+2. What problems does Next.js solve?  
+-> such as 
+    * Poor SEO with client side rendering
+    * Slow initial page load
+    * Manual routing and code splitting
+    * complex data fetching pattern
+    * Performence optimization overhead
+
+
+3. How does Next.js differ from Create React App(CRA)?  
+->CRA is client based setup focusing on development simplicity however nextjs is a full stack based on react
+
+We can do server redering, data fetching, static generation, apis routes in nextjs, CRA requires to all a lot of configuration for that. 
+
+
+
+4. What are the main features of Next.js? 
+->
+ - File based routing
+ - Api routes, server actions
+ - server side rendering and static generation
+ - server and client componenets
+ - img and font optimization
+ - better seo performence
+
+
+
+5. Explain the file-based routing system in Next.js  
+-> Nextjs use file based routing to "Define routes". Each folder represents a route segment and that files like page.tsx, layout.tsx defin the behavior
+
+Its a good approach to predict the route as anyone from the can understand navigation just by looking at the folder structure. 
+
+localhost/3000/contact -> contact is a folder and the contents of the folder is page.tsx.
+
+
+
+6. What is the pages router vs the app router?  
+->page route    - older routing system based on page directories
+                - relies on data fecthing methods like getServerSiderProps()
+
+
+->App route     - Newest system based on react server componets.
+                - it supports layout, streaming, nested routes and better data fetching
+
+
+
+7. What is the role of layout.tsx in the App Router?  
+-> Its a shared ui that persists across routes like header, sidebar, footer
+
+it avoid re-rendeingn common components. 
+
+
+
+8. What is use client and why is it needed?  
+->When you want any pages to behave like a client component you use "use client". It marks that this page is a client component. 
+
+By defualt evey page on nextjs is a server componet. You must explicitly mention "user client" in order to make it client component. 
+
+Its needed when you use browser features like dom manipulation, useEffect, even handlers. 
+
+
+
+9. What are Server Components in Next.js?  
+->  - Run only on the server, 
+    - fetches data directly, access secure resources and send rendered ui
+
+    
+
+10. What are Client Components in Next.js?
+->  - Run only on the client,
+    - handles interactivity like clicking, forms and animations.
+
+
