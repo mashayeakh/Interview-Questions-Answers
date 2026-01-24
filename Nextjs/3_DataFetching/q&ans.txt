@@ -1,0 +1,9 @@
+1. How does data fetching work in the App Router?
+2. Difference between fetch in Next.js and normal fetch
+3. What is cache: 'no-store'?
+4. What is revalidate in Next.js?
+5. How do Server Actions work?
+6. What are Server Actions used for?
+7. How do you handle loading and error states?
+8. What is loading.tsx?
+9. What is error.tsx?
